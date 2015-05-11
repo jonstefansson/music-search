@@ -9,5 +9,4 @@ curl \
 --header "Accept: application/json" \
 --url http://localhost:9200/music/track/_search \
 --data @"${basedir}/queries/playlists.json" \
-| jq -r '.facets["playlist-facets"].terms[] | "\(.term)	\(.count)"' \
-> "${basedir}/output/playlists.txt"
+| jq -r '.facets["playlist-facets"].terms[] | "\(.term)	\(.count)"'

@@ -4,7 +4,7 @@
 			"dynamic" : "false",
 			"properties" : {
 				"artist"       : {"type" : "string"},
-				"albumArtist"  : {
+				"album_artist"  : {
 					"type"   : "string",
 					"fields" : {
 						"facet" : {

@@ -3,7 +3,7 @@
 basedir=${TM_DIRECTORY:-$(pwd)}
 
 category='classical'
-category='jazz'
+# category='jazz'
 
 echo '| Album                   | Artist               |' > "${basedir}/output/${category}.txt"
 
