@@ -1,0 +1,24 @@
+{
+	"size" : 0,
+	"query" : {
+		"filtered" : {
+			"query" : {
+				"match_all" : {}
+			},
+			"filter" : {
+				"query" : {
+					"query_string" : { "query" : "playlists:Classical AND -album:Today's Top Tune"}
+				}
+			}
+		}
+	},
+	"facets" : {
+		"album-facets" : {
+			"terms" : {
+				"field"  : "album.facet",
+				"size"   : 3000,
+				"order"  : "term"
+			}
+		}
+	}
+}

@@ -1,0 +1,15 @@
+{
+	"size" : 0,
+	"query" : {
+		"match_all" : {}
+	},
+	"facets" : {
+		"playlist-facets" : {
+			"terms" : {
+				"field"  : "playlists.facet",
+				"size"   : 100,
+				"order"  : "term"
+			}
+		}
+	}
+}

@@ -1,0 +1,5 @@
+{
+	"query" : {
+		"query_string" : { "query" : "playlists:Classical"}
+	}
+}

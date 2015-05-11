@@ -1,0 +1,19 @@
+{
+  "from" : 0, "size" : 3204,
+  "query": {
+    "filtered": {
+      "filter": {
+        "not": {
+          "query": {
+            "multi_match": {
+              "query": "Eclectic",
+              "fields": [
+                "playlists"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

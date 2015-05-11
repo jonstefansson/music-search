@@ -1,0 +1,1 @@
+.hits.hits | map(._source | {artist, albumArtist, album, name})

@@ -1,0 +1,14 @@
+{
+	"query" : {
+		"query_string" : { "query" : "playlists:Classical"}
+	},
+	"facets" : {
+		"album-facets" : {
+			"terms" : {
+				"field"  : "album.facet",
+				"size"   : 1240,
+				"order"  : "term"
+			}
+		}
+	}
+}
