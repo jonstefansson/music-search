@@ -8,13 +8,13 @@ basedir=${TM_DIRECTORY:-$(pwd)}
 # album:bach
 # artist:salonen
 # 'jesu* AND playlists:eclectic'
-query=${1:?'query is required'}
 
 curl \
 -v \
 --get \
+--header "Content-Type: application/json; charset=UTF-8" \
 --header "Accept: application/json" \
---data-urlencode "q=${query}" \
 --data-urlencode "size=25" \
+--data-binary - \
 --url http://localhost:9200/music/track/_search \
 | jq '.'
