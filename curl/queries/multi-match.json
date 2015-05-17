@@ -1,0 +1,12 @@
+{
+  "query": {
+    "multi_match": {
+      "query": "Dylan",
+      "fields": [
+        "artist",
+        "album_artist^3",
+        "name"
+      ]
+    }
+  }
+}

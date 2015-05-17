@@ -1,0 +1,10 @@
+{
+  "query": {
+    "match": {
+      "album": {
+        "query": "Stravin",
+        "type": "phrase_prefix"
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "from": 0,
+  "size": 25,
+  "query": {
+    "match": {
+      "_all": {
+        "query": "tobias bernstein",
+        "operator": "or"
+      }
+    }
+  }
+}
