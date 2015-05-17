@@ -1,46 +1,77 @@
 {
-	"mappings" : {
-		"track" : {
-			"dynamic" : "false",
-			"properties" : {
-				"artist"       : {"type" : "string"},
-				"album_artist"  : {
-					"type"   : "string",
-					"fields" : {
-						"facet" : {
-							"type"  : "string",
-							"index" : "not_analyzed"
-						}
-					}
-				},
-				"album"        : {
-					"type"   : "string",
-					"fields" : {
-						"facet" : {
-							"type"  : "string",
-							"index" : "not_analyzed"
-						}
-					}
-				},
-				"name"          : {"type" : "string"},
-				"genre"         : {"type" : "string", "index" : "not_analyzed"},
-				"year"          : {"type" : "short"},
-				"date_added"    : {"type" : "date",   "include_in_all" : "no"},
-				"persistent_id" : {"type" : "string", "include_in_all" : "no", "index" : "not_analyzed"},
-				"disc_number"   : {"type" : "byte",   "include_in_all" : "no"},
-				"disc_count"    : {"type" : "byte",   "include_in_all" : "no"},
-				"track_number"  : {"type" : "short",  "include_in_all" : "no"},
-				"track_count"   : {"type" : "short",  "include_in_all" : "no"},
-				"playlists"     : {
-					"type"   : "string",
-					"fields" : {
-						"facet" : {
-							"type"  : "string",
-							"index" : "not_analyzed"
-						}
-					}
-				}
-			}
-		}
-	}
+  "mappings": {
+    "track": {
+      "dynamic": "false",
+      "properties": {
+        "artist": {
+          "type": "string",
+          "index": "analyzed"
+        },
+        "album_artist": {
+          "type": "string",
+          "index": "analyzed",
+          "fields": {
+            "raw": {
+              "type": "string",
+              "index": "not_analyzed"
+            }
+          }
+        },
+        "album": {
+          "type": "string",
+          "index": "analyzed",
+          "fields": {
+            "raw": {
+              "type": "string",
+              "index": "not_analyzed"
+            }
+          }
+        },
+        "name": {
+          "type": "string"
+        },
+        "genre": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "year": {
+          "type": "short"
+        },
+        "date_added": {
+          "type": "date",
+          "include_in_all": "no"
+        },
+        "persistent_id": {
+          "type": "string",
+          "include_in_all": "no",
+          "index": "not_analyzed"
+        },
+        "disc_number": {
+          "type": "byte",
+          "include_in_all": "no"
+        },
+        "disc_count": {
+          "type": "byte",
+          "include_in_all": "no"
+        },
+        "track_number": {
+          "type": "short",
+          "include_in_all": "no"
+        },
+        "track_count": {
+          "type": "short",
+          "include_in_all": "no"
+        },
+        "playlists": {
+          "type": "string",
+          "fields": {
+            "facet": {
+              "type": "string",
+              "index": "not_analyzed"
+            }
+          }
+        }
+      }
+    }
+  }
 }

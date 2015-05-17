@@ -14,7 +14,7 @@ curl \
 --get \
 --header "Content-Type: application/json; charset=UTF-8" \
 --header "Accept: application/json" \
---data-urlencode "size=25" \
+--data-urlencode "size=5" \
 --data-binary - \
 --url http://localhost:9200/music/track/_search \
 | jq '.'
