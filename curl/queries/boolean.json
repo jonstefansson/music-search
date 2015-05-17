@@ -1,0 +1,27 @@
+{
+  "from": 0,
+  "size": 25,
+  "_source": {
+    "include": ["artist", "album*", "name", "genre", "date_added", "playlists"],
+    "exclude": ["disc*", "persistent_id", "track*", "year"]
+  },
+  "query": {
+    "bool": {
+      "should": {
+        "match_all": {}
+      },
+      "must_not": [
+        {
+          "term": {
+            "playlists": "eclectic"
+          }
+        },
+        {
+          "term": {
+            "playlists": "classical"
+          }
+        }
+      ]
+    }
+  }
+}

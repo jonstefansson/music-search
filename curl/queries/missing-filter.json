@@ -1,0 +1,17 @@
+{
+  "from": 125,
+  "size": 25,
+  "_source": {
+    "include": ["artist", "album*", "name", "genre", "playlists"],
+    "exclude": ["disc*", "persistent_id", "track*", "year", "date_added"]
+  },
+  "query": {
+    "constant_score": {
+      "filter": {
+        "missing": {
+          "field": "playlists"
+        }
+      }
+    }
+  }
+}

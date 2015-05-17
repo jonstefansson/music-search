@@ -1,0 +1,19 @@
+{
+  "aggregations": {
+    "unassigned": {
+      "filter": {
+        "missing": {
+          "field": "playlists"
+        }
+      },
+      "aggregations": {
+        "buckets": {
+          "terms": {
+            "field": "album_artist.raw",
+            "size": 0
+          }
+        }
+      }
+    }
+  }
+}
