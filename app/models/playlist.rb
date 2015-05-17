@@ -23,7 +23,6 @@ class Playlist
         'TV Shows',
         'Podcasts',
         'iTunes U',
-        'Audiobooks',
         'Tones',
         'Purchased',
         'Genius',
