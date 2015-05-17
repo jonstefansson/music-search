@@ -3,7 +3,7 @@
 basedir=${TM_DIRECTORY:-$(pwd)}
 
 curl \
--v \
+-s \
 --request GET \
 --header "Content-Type: application/json; charset=UTF-8" \
 --header "Accept: application/json" \

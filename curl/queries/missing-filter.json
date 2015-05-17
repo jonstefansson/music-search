@@ -1,6 +1,6 @@
 {
-  "from": 125,
-  "size": 25,
+  "from": 0,
+  "size": 1000,
   "_source": {
     "include": ["artist", "album*", "name", "genre", "playlists"],
     "exclude": ["disc*", "persistent_id", "track*", "year", "date_added"]
