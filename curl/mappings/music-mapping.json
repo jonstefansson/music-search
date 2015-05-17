@@ -64,12 +64,7 @@
         },
         "playlists": {
           "type": "string",
-          "fields": {
-            "facet": {
-              "type": "string",
-              "index": "not_analyzed"
-            }
-          }
+          "index": "not_analyzed"
         }
       }
     }
