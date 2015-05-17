@@ -9,12 +9,13 @@ basedir=${TM_DIRECTORY:-$(pwd)}
 # artist:salonen
 # 'jesu* AND playlists:eclectic'
 
+# --data-urlencode "size=5" \
+
 curl \
 -v \
---get \
+--request POST \
 --header "Content-Type: application/json; charset=UTF-8" \
 --header "Accept: application/json" \
---data-urlencode "size=5" \
---data-binary - \
+--data-binary @- \
 --url http://localhost:9200/music/track/_search \
 | jq '.'
