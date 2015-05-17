@@ -1,0 +1,20 @@
+{
+  "from": 0,
+  "size": 25,
+  "_source": {
+    "include": ["artist", "album*", "name", "genre", "date_added", "playlists"],
+    "exclude": ["disc*", "persistent_id", "track*", "year"]
+  },
+  "query": {
+    "constant_score": {
+      "filter": {
+        "range": {
+          "date_added": {
+            "from": "2015-04-01",
+            "to":   "2015-05-31"
+          }
+        }
+      }
+    }
+  }
+}
