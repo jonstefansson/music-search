@@ -62,53 +62,8 @@ class Library
   end
 
   def create_index
-    @client.indices.create index: INDEX_NAME,
-        body: {
-            mappings: {
-                track: {
-                    dynamic: false,
-                    properties: {
-                        artist: {type: 'string'},
-                        album_artist: {
-                            type:   'string',
-                            fields: {
-                                facet: {
-                                    type:  'string',
-                                    index: 'not_analyzed'
-                                }
-                            }
-                        },
-                        album: {
-                            type:   'string',
-                            fields: {
-                                facet: {
-                                    type:  'string',
-                                    index: 'not_analyzed'
-                                }
-                            }
-                        },
-                        name:          {type: 'string'},
-                        genre:         {type: 'string', index: 'not_analyzed'},
-                        year:          {type: 'short'},
-                        date_added:    {type: 'date',   include_in_all: 'no'},
-                        persistent_id: {type: 'string', include_in_all: 'no', index: 'not_analyzed'},
-                        disc_number:   {type: 'byte',   include_in_all: 'no'},
-                        disc_count:    {type: 'byte',   include_in_all: 'no'},
-                        track_number:  {type: 'short',  include_in_all: 'no'},
-                        track_count:   {type: 'short',  include_in_all: 'no'},
-                        playlists: {
-                            type:   'string',
-                            fields: {
-                                facet: {
-                                    type:  'string',
-                                    index: 'not_analyzed'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
+    mappings = JSON.load Rails.root.join('curl', 'mappings', 'music-mapping.json')
+    @client.indices.create index: INDEX_NAME, body: mappings
     ap "#{INDEX_NAME} created"
   end
 
