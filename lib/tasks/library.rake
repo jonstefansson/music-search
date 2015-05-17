@@ -1,7 +1,7 @@
 namespace :library do
 
   desc 'Parse the iTunes music library plist and build index'
-  task :load_index => :parse_library do
+  task :index => :parse_library do
     @library.load_index
   end
 
