@@ -12,10 +12,10 @@ basedir=${TM_DIRECTORY:-$(pwd)}
 # --data-urlencode "size=5" \
 
 curl \
--v \
---request POST \
+-s \
+--request GET \
 --header "Content-Type: application/json; charset=UTF-8" \
 --header "Accept: application/json" \
---data-binary @- \
+--data @- \
 --url http://localhost:9200/music/track/_search \
 | jq '.'
