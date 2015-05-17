@@ -26,7 +26,6 @@ class Playlist
         'Tones',
         'Purchased',
         'Genius',
-        'KCRW Top Tune',
         'Music Videos',
         'Recently Added',
         'Recently Played',
