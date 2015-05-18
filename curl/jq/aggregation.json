@@ -1,1 +1,1 @@
-.aggregations."filtered-agg".albums.buckets | map(.key) | sort | map(tostring) | .[]
+.aggregations."filtered-agg".albums.buckets | map(.key) | sort | .[]
