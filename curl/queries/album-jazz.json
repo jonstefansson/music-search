@@ -1,6 +1,6 @@
 {
   "aggregations": {
-    "classical": {
+    "filtered-agg": {
       "filter": {
         "query": {
           "query_string": {
@@ -9,7 +9,7 @@
         }
       },
       "aggregations": {
-        "buckets": {
+        "albums": {
           "terms": {
             "field": "album.raw",
             "size": 0
