@@ -4,11 +4,23 @@
 
 window.MusicSearch = do ->
 
+  setFromField = (from) ->
+    $("#from").val(from)
+
+  setNext: (next) ->
+    setFromField(next)
+
   initialize: (form, results) ->
     form.on("ajax:success", (e, data, status, xhr) ->
       results.html(data)
     ).on("ajax:error", (e, xhr, status, error) ->
       console?.error error
+    )
+    $("#query", form).on("change", ->
+      setFromField(0)
+    )
+    $("#field", form).on("change", ->
+      setFromField(0)
     )
 
 $ ->

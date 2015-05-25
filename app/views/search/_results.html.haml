@@ -15,3 +15,7 @@
           %td= result._source.album_artist
           %td= result._source.artist
           %td= result._source.name
+
+- if @page.has_next?
+  = javascript_tag do
+    MusicSearch.setNext(#{@page.next})
