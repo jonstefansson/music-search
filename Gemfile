@@ -37,7 +37,6 @@ gem 'awesome_print'
 gem 'plist'
 gem 'haml-rails'
 gem 'bootstrap-sass'
-gem 'awesome_print'
 gem 'hashie'
 
 group :development, :test do
