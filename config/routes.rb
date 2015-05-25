@@ -54,8 +54,10 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
   root 'search#index'
-  post 'search/search' => 'search#search'
 
-  get 'albums/' => 'albums#index'
-  post 'albums/search' => 'albums#search'
+  get 'search', to: 'search#index'
+  post 'search/search', to: 'search#search'
+
+  get 'albums', to: 'albums#index'
+  post 'albums/search', to: 'albums#search'
 end

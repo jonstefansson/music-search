@@ -7,4 +7,11 @@
   = csrf_meta_tags
 %body
   .container-fluid
+    %nav.navbar.navbar-default
+      .container-fluid
+        %ul.nav.navbar-nav
+          %li{role: 'presentation'}
+            = link_to 'Search', search_path
+          %li{role: 'presentation'}
+            =link_to 'Albums', albums_path
     = yield
