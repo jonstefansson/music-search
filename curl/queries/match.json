@@ -4,8 +4,8 @@
   "query": {
     "match": {
       "_all": {
-        "query": "tobias bernstein",
-        "operator": "or"
+        "query": "mozart clarinet",
+        "operator": "and"
       }
     }
   }

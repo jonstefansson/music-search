@@ -1,0 +1,15 @@
+%h1 Music Search
+
+=form_tag search_search_path, id: 'search-form', class: 'form-inline', remote: true do
+  .form-group
+    =label_tag 'query'
+    =text_field_tag 'query', nil, class: 'form-control', size: '50'
+    =label_tag 'Field'
+    =select_tag 'field', options_for_select(%W(_all album artist album_artist name), '_all'), class: 'form-control'
+    =label_tag 'from'
+    =text_field_tag 'from', '0', class: 'form-control', size: '4'
+    =label_tag 'size'
+    =text_field_tag 'size', '10', class: 'form-control', size: '4'
+    =submit_tag 'Search', class: 'btn btn-primary'
+
+#search-results

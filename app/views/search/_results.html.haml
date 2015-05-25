@@ -1,0 +1,17 @@
+%p= "Total Hits: #{@results.total}"
+
+.table-responsive
+  %table.table
+    %thead
+      %tr
+        %th Album
+        %th Album Artist
+        %th Artist
+        %th Name
+    %tbody
+      - @results.hits.each do |result|
+        %tr
+          %td= result._source.album
+          %td= result._source.album_artist
+          %td= result._source.artist
+          %td= result._source.name
