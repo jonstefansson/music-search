@@ -1,0 +1,9 @@
+%h1 Album Lists
+
+=form_tag albums_search_path, id: 'search-form', class: 'form-inline', remote: true do
+  .form-group
+    =label_tag 'playlist'
+    =select_tag 'playlist', options_for_select(%W(Classical Jazz Choral Albums Bach Christmas Country Soundtrack Songbook Tranquil Work Instrumental Whitenoise Ambient), 'Classical'), class: 'form-control'
+    =submit_tag 'List', class: 'btn btn-primary'
+
+#search-results

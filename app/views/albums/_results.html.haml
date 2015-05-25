@@ -1,0 +1,3 @@
+%ol
+  - @results['filtered-agg'].albums.buckets.each do |bucket|
+    %li= bucket['key']
