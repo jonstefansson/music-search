@@ -1,0 +1,12 @@
+{
+  "query" : {
+    "bool": {
+      "must": {
+        "match": {"_all" : "Stevens"}
+      },
+      "filter": {
+        "term": {"playlists": "Classical"}
+      }
+    }
+  }
+}
