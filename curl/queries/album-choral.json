@@ -1,0 +1,21 @@
+{
+  "aggregations": {
+    "filtered-agg": {
+      "filter": {
+        "query": {
+          "query_string": {
+            "query": "playlists:Choral AND -album:Today's Top Tune"
+          }
+        }
+      },
+      "aggregations": {
+        "albums": {
+          "terms": {
+            "field": "album.raw",
+            "size": 0
+          }
+        }
+      }
+    }
+  }
+}

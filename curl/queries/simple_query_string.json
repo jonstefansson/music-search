@@ -1,7 +1,14 @@
 {
   "query": {
-    "simple_query_string": {
-      "query": "dylan"
+    "bool": {
+      "must": {
+        "simple_query_string": {
+          "query": "bach"
+        }
+      },
+      "filter": {
+        "term": {"playlists": "Eclectic"}
+      }
     }
   }
 }

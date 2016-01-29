@@ -1,7 +1,7 @@
 {
   "query": {
     "query_string": {
-      "query": "jesu* AND playlists:eclectic"
+      "query": "dylan AND playlists:Eclectic"
     }
   }
 }
